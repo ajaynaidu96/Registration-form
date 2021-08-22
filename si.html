@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI calculator</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+           <td>Pricipal</td>
+           <td><input type="text" id="p"></td>
+            </tr>
+            <tr>
+                <td>Rate</td>
+                <td><input type="text" id="r"></td>
+                 </tr>
+                 <tr>
+                    <td>Time</td>
+                    <td><input type="text" id="t"></td>
+                     </tr>
+                     <td>
+                         <input type="button" value="calculate" onclick="si()">
+                         </td>
+        </table>
+        <div id="res"></div>
+        <script>
+            function si(){
+                var p =parseInt( document.getElementById("p").value);
+                var r =parseInt( document.getElementById("r").value);
+                var t =parseInt( document.getElementById("t").value);
+                var si = p*r/100*t;
+                document.getElementById("res").innerHTML = si.toFixed(2);
+            }
+        </script>
+</body>
+</html>
