@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 30px;
+        }
+        .text{
+            text-align: left;
+            margin-left: 48%;
+            font-size: 20px;
+        }
+        #H,#W{
+            text-align: left;
+            margin-left: 45%;
+        }
+        #result{
+            text-align: left;
+            margin-left: 48%;
+            color: blue;
+        }
+        #btn{
+            text-align: left;
+            margin-left: 48%;
+            margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>BMI calculator</h1>
+    <p class="text">Height</p>
+    <input type="text" id="H">
+    <p class="text">Weight</p>
+    <input type="text" id="W">
+    <p id="result"></p>
+    <button id="btn" onclick="BMI()">Calculate</button>
+    </div>
+    <script>
+        function BMI(){
+            var H= document.getElementById("H").value;
+            var W = document.getElementById("W").value;
+            var bmi = W/(H/100*H/100);
+            var bmio = (bmi.toFixed(2));
+            document.getElementById("result").innerHTML = "your bmi is"  + bmio ;
+        }
+        </script>
+</body>
+</html>
